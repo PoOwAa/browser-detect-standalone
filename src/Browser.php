@@ -19,7 +19,7 @@ class Browser
         return self::$parser;
     }
 
-    public function __callStatic($method, $params)
+    public static function __callStatic($method, $params)
     {
         self::getParser();
         $result = self::$parser->detect();
